@@ -12,7 +12,7 @@ def click(x,y):
     win32api.mouse_event(win32con.MOUSEEVENTF_LEFTDOWN,0,0)
     win32api.mouse_event(win32con.MOUSEEVENTF_LEFTUP,0,0)
 
-#Color of center: (255, 219, 195)
+# Color of center: (255, 219, 195)
 
 while keyboard.is_pressed('q') == False:
     flag = 0
@@ -25,7 +25,7 @@ while keyboard.is_pressed('q') == False:
 
             r, g, b = pic.getpixel((x, y))
 
-            if b == 232 and r == 149 and g == 195:
+            if r == 149 and g == 195 and b == 232:
                 flag = 1
                 click(x+858, y+199)
                 time.sleep(0.05)
@@ -33,3 +33,4 @@ while keyboard.is_pressed('q') == False:
 
         if flag == 1:
             break
+
