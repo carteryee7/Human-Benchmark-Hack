@@ -42,9 +42,9 @@ def click(x,y):
     win32api.mouse_event(win32con.MOUSEEVENTF_LEFTUP,0,0)
 
 # Define the region to monitor (example: top-left 300x300 pixel area)
-# Format: (y, x, width, height)
+# Format: (top, left, width, height)
 # You will need to adjust these coordinates for your specific use case.
-monitor_region = {"y": 353, "x": 1016, "width": 500, "height": 100}
+monitor_region = {"top": 353, "left": 1016, "width": 500, "height": 100}
 
 print(f"Monitoring screen region: {monitor_region}")
 print("Press Ctrl+C to exit.")
@@ -71,3 +71,4 @@ except KeyboardInterrupt:
     print("\nProgram terminated by user.")
 except Exception as e:
     print(f"An error occurred: {e}")
+
